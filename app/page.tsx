@@ -29,36 +29,22 @@ export default function Home() {
     }
   };
 
-  const signUp = async () => {
-    try {
-      const { data } = await axios({
-        method: "POST",
-        url: "http://localhost:8000/signup",
-        data: {
-          email: email,
-          password: password,
-          username: username,
-        },
-      });
-      console.log(data, "data 20 frontend");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   useEffect(() => {
     fetchAllProducts();
   }, []);
-  console.log(allProducts);
+
   return (
-    <main className="">
+    <main className="p-10 flex flex-col gap-10">
       <Navbar />
-      <button onClick={signUp}>Sign Up</button>
-      <div className="flex flex-wrap justify-between p-4">
+      <div className="flex flex-wrap gap-14">
         {allProducts &&
           allProducts.map(product => (
-            <div className="flex flex-col justify-center w-[200px]">
-              <img src={product?.imageurl} alt="logo" className="w-[100px]" />
+            <div className="flex flex-col justify-center items-center w-[400px]  border">
+              <img
+                src={product?.imageurl}
+                alt="logo"
+                className="w-full h-[350px]"
+              />
               <p>{product?.name}</p>
               <p>{product?.description}</p>
 
