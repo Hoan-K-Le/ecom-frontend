@@ -4,30 +4,21 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav>
-      <div className="bg-black text-white text-xs  flex gap-2 justify-end px-4 py-2">
-        <Link href="#">Sell on Hoan's Site</Link>
-        <Link href="#">Help & Contact</Link>
-      </div>
-      <div className="flex justify-between p-5 items-center">
-        {/* logo */}
-        <div>
-          <Link href="/">{logoIcon()}</Link>
-          {/* search engine */}
-        </div>
-        <input
-          type="search"
-          placeholder="Search..."
-          className=" border bg-inherit rounded p-1"
-        />
-        {/* cart signin || profile pic */}
-        <div className="flex items-center gap-2">
-          <Link href="/login">Log In</Link>
-          <button>{cart()}</button>
-        </div>
+    <nav className="flex items-center justify-between p-16 text-2xl">
+      <div className="flex gap-4 items-center">
+        <Link href="/">Shop</Link>
+        <Link href="/about">About</Link>
+        <Link href="/about">Contact</Link>
       </div>
 
-      <div>{/*subnavbar? center, Men, Women, Kids,   */}</div>
+      <div>
+        <p>Hoan's Site</p>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <Link href="/signup">Sign Up</Link>
+        <Link href="#">{cart()}</Link>
+      </div>
     </nav>
   );
 }
