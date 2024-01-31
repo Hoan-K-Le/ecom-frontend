@@ -69,7 +69,7 @@ function Signup() {
           onChange={handleChange}
         />
         <button onClick={signUp} className="w-full bg-green-300 p-1 rounded">
-          Submit
+          Sign Up
         </button>
       </div>
     </div>
