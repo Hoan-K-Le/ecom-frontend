@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between text-2xl">
+    <nav className="flex justify-between text-2xl">
       <div className="flex gap-4 items-center">
         <Link href="/">Shop</Link>
         <Link href="/about">About</Link>

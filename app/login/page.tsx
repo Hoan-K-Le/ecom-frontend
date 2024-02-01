@@ -19,6 +19,7 @@ function Login() {
         password: password,
       },
     });
+    console.log(data);
     return data;
   };
 
