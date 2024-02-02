@@ -10,7 +10,8 @@ function Products() {
   const [activeCategory, setActiveCategory] = useState("all");
   const dispatch = useDispatch<AppDispatch>();
   const allProducts = useAppSelector(state => state.products.products);
-
+  const userInfo = useAppSelector(state => state.userData.userData);
+  console.log(userInfo, "userinfo from 14 products");
   const fetchAllProducts = async () => {
     try {
       const { data } = await axios({

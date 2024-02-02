@@ -28,7 +28,6 @@ export const getProductItem = createAsyncThunk(
         method: "GET",
         url: `http://localhost:8000/product/${id}`,
       });
-      console.log(data, "data from store productId");
       return data;
     } catch (error) {
       console.log(error);
