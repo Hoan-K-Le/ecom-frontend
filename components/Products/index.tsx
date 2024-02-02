@@ -11,7 +11,6 @@ function Products() {
   const dispatch = useDispatch<AppDispatch>();
   const allProducts = useAppSelector(state => state.products.products);
   const userInfo = useAppSelector(state => state.userData.userData);
-  console.log(userInfo, "userinfo from 14 products");
   const fetchAllProducts = async () => {
     try {
       const { data } = await axios({
@@ -30,6 +29,7 @@ function Products() {
 
   useEffect(() => {
     fetchAllProducts();
+    console.log(userInfo, "userInfo");
   }, []);
 
   const filteredProducts =
